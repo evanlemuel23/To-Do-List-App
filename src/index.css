@@ -1,0 +1,196 @@
+/* Gradient background for the entire page */
+body {
+  background: linear-gradient(135deg, hsl(270, 50%, 20%), hsl(300, 50%, 10%));
+  color: white;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+/* Container for the to-do list */
+.to-do-list {
+  text-align: center;
+  margin-top: 100px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(10px);
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Heading style */
+h1 {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  animation: glow 2s infinite alternate;
+}
+
+@keyframes glow {
+  0% {
+    text-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    text-shadow: 0 0 20px rgba(0, 0, 0, 1);
+  }
+}
+
+/* Input field styling */
+input[type="text"] {
+  font-size: 1.6rem;
+  padding: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: hsl(270, 50%, 70%);
+  box-shadow: 0 0 10px hsl(270, 50%, 70%);
+  outline: none;
+}
+
+/* Button styling */
+.add-button, .delete-button, .move-button {
+  padding: 10px 20px;
+  font-size: 1.4rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+}
+
+.add-button {
+  background-color: hsl(125, 47%, 54%);
+  color: white;
+}
+
+.add-button:hover {
+  background-color: hsl(125, 47%, 44%);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.add-button:active {
+  border: 2px solid hsl(125, 47%, 54%);
+  box-shadow: 0 0 20px hsl(125, 47%, 54%);
+}
+
+.delete-button {
+  background-color: hsl(10, 90%, 50%);
+  color: white;
+}
+
+.delete-button:hover {
+  background-color: hsl(10, 90%, 40%);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.delete-button:active {
+  border: 2px solid hsl(10, 90%, 50%);
+  box-shadow: 0 0 20px hsl(10, 90%, 50%);
+}
+
+/* Updated Move Button with Dark Blue Gradient */
+.move-button {
+  background: linear-gradient(135deg, hsl(220, 70%, 30%), hsl(240, 70%, 20%));
+  color: white;
+}
+
+.move-button:hover {
+  background: linear-gradient(135deg, hsl(220, 70%, 25%), hsl(240, 70%, 15%));
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.7);
+}
+
+.move-button:active {
+  border: 2px solid hsl(220, 70%, 30%);
+  box-shadow: 0 0 20px hsl(220, 70%, 30%);
+}
+
+/* Add spacing between buttons */
+.delete-button, .move-button {
+  margin-left: 10px; /* Adds space between buttons */
+}
+
+.move-button {
+  margin-right: 5px; /* Adds a little space after the move buttons */
+}
+
+/* List styling */
+ol {
+  padding: 0;
+  list-style-type: none;
+}
+
+li {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.1);
+  margin-bottom: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+li:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+}
+
+.text {
+  flex: 1;
+  color: white;
+}
+
+/* Input container styling */
+.input-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 15px;
+}
+
+.task-input {
+  width: 250px;
+  height: 40px;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.task-input:focus {
+  border-color: hsl(270, 50%, 70%);
+  box-shadow: 0 0 10px hsl(270, 50%, 70%);
+  outline: none;
+}
+
+/* Glow effect for buttons on hover */
+.add-button:hover, .delete-button:hover, .move-button:hover {
+  animation: button-glow 1.5s infinite alternate;
+}
+
+@keyframes button-glow {
+  0% {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 1);
+  }
+}
